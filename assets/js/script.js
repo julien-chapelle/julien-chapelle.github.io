@@ -55,13 +55,9 @@ function game() {
     }
     ctx.fillStyle = 'red';
     ctx.fillRect(ax * gs, ay * gs, gs - 2, gs - 2);
+
+    document.getElementById('score').innerHTML = 'Score : ' + (tail - 5);
 }
-
-let left = document.getElementById('btnLeft');
-let up = document.getElementById('btnUp');
-let right = document.getElementById('btnRight');
-let down = document.getElementById('btnDown');
-
 
 function click(evt) {
     if (evt.target.id == 'btnLeft') {
@@ -79,24 +75,4 @@ function click(evt) {
         xv = 0;
         yv = 1;
     }
-
-    // switch (evt.onclick) {
-
-    //     case left:
-    //         xv = -1;
-    //         yv = 0;
-    //         break;
-    //     case up:
-    //         xv = 0;
-    //         yv = -1;
-    //         break;
-    //     case right:
-    //         xv = 1;
-    //         yv = 0;
-    //         break;
-    //     case down:
-    //         xv = 0;
-    //         yv = 1;
-    //         break;
-    // }
 }
